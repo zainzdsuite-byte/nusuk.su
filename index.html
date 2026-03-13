@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    خدمات الحج
+  </header>
+
+  <div class="page-wrap">
+    <div class="card login-card">
+      <h2>تسجيل الدخول</h2>
+
+      <form onsubmit="return login()">
+        <input type="text" id="username" placeholder="اسم المستخدم" required>
+        <input type="password" id="password" placeholder="كلمة المرور" required>
+        <button type="submit">تسجيل الدخول</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+
+      if (user === "bilal1970" && pass === "bilal1970") {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("بيانات الدخول غير صحيحة");
+      }
+
+      return false;
+    }
+  </script>
+
+</body>
+</html>
